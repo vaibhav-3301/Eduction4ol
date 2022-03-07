@@ -1,0 +1,17 @@
+import random
+import string
+import pyperclip
+
+def specific_string(length):
+    sample_string=input("")
+    print("HINT: ",sample_string)
+    result=''.join((random.choice(sample_string))for x in range(length))
+    len(result)
+    print(result)
+    if len(sample_string)<len(result):
+        print("Weak password")
+    else:
+        print("Strong Password")
+    with open(r"C:\Users\Vaibhav\PycharmProjects\Education4ol\venv\Savedpassword.txt","w") as f:
+        f.write(f"{result}")
+specific_string(10)
